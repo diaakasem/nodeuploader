@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+
+  form(class='form-horizontal', method='post', action='/attachFile', enctype='multipart/form-data')
+    fieldset
+      .control-group
+        label(class='control-label', for="file") Upload File
+        .controls
+          input(class='input-file', name='file', type='file')
+      .form-actions
+        input(type="submit", class="btn btn-primary") Start Uploading
+
+  form
+    fieldset
+      .control-group
+        label(class='control-label', for="file") Remove File
+        .controls
+          input(class='input-file', name='file', type='text', id="removeFileName")
+      .form-actions
+        button(id="remove", type="button", class="btn btn-primary") Remove
+
+
